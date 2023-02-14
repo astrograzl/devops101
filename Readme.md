@@ -5,7 +5,6 @@ try in your terminal next few commands
 
 ## Build image
 
-    $ ./gradlew bootJar
     $ docker build -t devops101 .
 
 or alternatively
