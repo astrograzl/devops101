@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -15,12 +16,12 @@ import java.util.List;
 public class Article {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id private Long id;
-    private Author author;
-    private List<Author> authors;
+    @OneToOne private Author author = new Author();
+//    @ManyToOne private List<Author> authors = new ArrayList<>();
     private String title;
     private String perex;
     private String content;
-    /*Z permanent_link (reference) */
+    /**Z permanent_link (reference) */
     private String link;
 
 }

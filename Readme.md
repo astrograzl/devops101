@@ -14,3 +14,16 @@ or alternatively
 ## Run container
 
     $ docker run -p 8080:8080 devops101:latest
+
+## Future finish
+
+    $ docker-compose up
+
+### Milestones
+
+* Author centric Activity monitoring
+  * Backlog store Reading and Watching as Activity
+* Recognize Active || Pasive && Pasive-Active states
+* Bibliography collect references on sources on-line
+* Bookmark keep by Receptionist serves Author(s)
+  * Librerian record Article(s) of Author(s)
