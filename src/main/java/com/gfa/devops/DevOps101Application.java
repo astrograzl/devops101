@@ -1,8 +1,12 @@
 package com.gfa.devops;
 
+import com.gfa.devops.models.Author;
+import com.gfa.devops.models.art.Practixing;
+import com.gfa.devops.models.art.Activity;
+import com.gfa.devops.models.art.Watching;
+import com.gfa.devops.models.art.Reading;
+import com.gfa.devops.repos.Bookmark;
 import com.gfa.devops.repos.Backlog;
-import com.gfa.devops.models.Reading;
-import com.gfa.devops.models.Activity;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -13,7 +17,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class DevOps101Application implements CommandLineRunner {
 
     private final Backlog backlog;
-    @Autowired public DevOps101Application(Backlog backlog) {
+    private final Bookmark bookmark;
+    @Autowired public DevOps101Application(Backlog backlog,
+                                           Bookmark bookmark) {
+        this.bookmark = bookmark;
         this.backlog = backlog;
     }
 
@@ -24,8 +31,17 @@ public class DevOps101Application implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         System.err.println("Application starting...");
-        Activity activity = new Reading();
-        this.backlog.save(activity);
+        Author author = new Author();
+        author.setName("Zdeněk Janák");
+        author.setEmail("<zdenek@astronomie.cz>");
+        author.setProfile("https://astrograzl.github.io/");
+        this.bookmark.save(author);
+        Activity reading = new Reading();
+        Activity watching = new Watching();
+        Activity practixing = new Practixing();
+        this.backlog.save(reading);
+        this.backlog.save(watching);
+        this.backlog.save(practixing);
         System.out.println("Activity executed...");
     }
 }

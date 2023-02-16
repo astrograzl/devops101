@@ -1,6 +1,6 @@
 package com.gfa.devops.repos;
 
-import com.gfa.devops.models.Activity;
+import com.gfa.devops.models.art.Activity;
 
 import org.springframework.stereotype.Repository;
 import org.springframework.data.jpa.repository.JpaRepository;

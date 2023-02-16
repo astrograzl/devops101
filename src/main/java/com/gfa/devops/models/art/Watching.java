@@ -1,5 +1,6 @@
-package com.gfa.devops.models;
+package com.gfa.devops.models.art;
 
+import com.gfa.devops.models.art.Activity;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.NoArgsConstructor;
