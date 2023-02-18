@@ -1,0 +1,24 @@
+services:
+
+  database:
+    image: mysql
+#    restart: always
+    volumes:
+      - type: volume
+        source: saved
+        target: /docker-entrypoint-initdb.d
+    environment:
+      MYSQL_RANDOM_ROOT_PASSWORD: yes
+      MYSQL_DATABASE: ${dtbs}
+      MYSQL_PASSWD: ${pswd}
+      MYSQL_USER: ${me}
+
+  adminer:
+    image: adminer
+    ports:
+      - 8080:8080
+
+volumes:
+  saved:
+    
+maintainer: astrograzl
