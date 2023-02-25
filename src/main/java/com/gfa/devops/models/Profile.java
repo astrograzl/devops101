@@ -1,8 +1,8 @@
 package com.gfa.devops.models;
 
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -18,6 +18,6 @@ public class Profile {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id private Long id;
     @OneToOne private  Author author;
-    @ManyToOne private List<Article> articles = new ArrayList<>();
-    @ManyToOne private List<Activity> activities = new LinkedList<>();
+    @ManyToMany private List<Article> articles = new ArrayList<>();
+//    @ManyToMany private List<Activity> activities = new LinkedList<>();
 }

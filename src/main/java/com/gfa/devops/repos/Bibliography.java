@@ -1,8 +1,8 @@
 package com.gfa.devops.repos;
 
+import com.gfa.devops.models.Author;
 import com.gfa.devops.models.Article;
 
-import com.gfa.devops.models.Author;
 import org.springframework.stereotype.Repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 

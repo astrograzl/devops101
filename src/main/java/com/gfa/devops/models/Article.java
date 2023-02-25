@@ -1,10 +1,11 @@
 package com.gfa.devops.models;
 
-import lombok.Setter;
 import lombok.Getter;
+import lombok.Setter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -15,8 +16,8 @@ import java.util.List;
 public class Article {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id private Long id;
-    private Author author;
-    private List<Author> authors;
+    @OneToOne private Author author;
+//    @ManyToOne private List<Author> authors = new ArrayList<>();
     private String title;
     private String perex;
     private String content;
