@@ -1,4 +1,4 @@
-package com.gfa.frontman;
+package com.gfa.devops;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

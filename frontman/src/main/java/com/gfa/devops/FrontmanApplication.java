@@ -1,4 +1,4 @@
-package com.gfa.frontman;
+package com.gfa.devops;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

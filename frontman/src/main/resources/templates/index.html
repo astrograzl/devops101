@@ -10,7 +10,14 @@
   <body data-bs-theme="dark">
     <div class="container">
       <header><h1>Welcome to machine!</h1></header>
-      <main><!-- more --></main>
+      <main>
+        <form th:action="@{/user}" method="post">
+          <label>Nickname <input type="text"></label>
+          <label>E-m@il <input type="email"></label>
+          <label>Profile <input type="url"></label>
+          <button type="submit" class="btn btn-primary">Enter</button>
+        </form>
+      </main>
     </div>
     <footer><script th:src="@{/boot/js/bootstrap.bundle.min.js}"></script></footer>
   </body>
